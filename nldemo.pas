@@ -1,7 +1,8 @@
-program NewLineDemo;
+program square;
+var
+	x: int64;
 begin
-    write('First');
-    writeln('Second');
-    write('Third');
-    writeln('Fourth')
-end.
+	read(x);
+	x := x*x;
+	writeln(x)
+end. 
