@@ -1,19 +1,23 @@
-program poem;
+program modulo;
+var
+	a: integer;
+	b: integer;
+	t: integer;
 begin
-  writeln('Farewell to you, thou sea of blue!');
-  readln();
-  writeln('A last farewell I bid to thee,');
-  readln();
-  writeln('Thou proudly rushing waters few,');
-  readln();
-  writeln('And beauty''s boundless liberty.');
-  readln();
-  writeln('In vain do we with tears complain —');
-  readln();
-  writeln('No more thy waves will lull my pain,');
-  readln();
-  writeln('Nor quench the thirst that burns within...');
-  readln();
-  writeln('I hear no more thy voice again.');
-  readln();
+	read(a);
+	read(b);
+	if a > b then
+	begin
+		t := a;
+		a := b;
+		b := t;
+		writeln('a = ', a);
+		writeln('b = ', t)
+	end
+	else
+	begin
+		writeln(a);
+		writeln(b)
+	end
 end.
+
