@@ -1,28 +1,18 @@
-program Fib;
-function Fibbonacci(n: integer): longint;
-var
-	i: integer;
-	p, q, r: longint;
+program degree;
+procedure Powers(x: real; var quad, cube, fourth, fifth: real);
 begin
-	if n <= 0 then
-		Fibbonacci := 0
-	else
-	begin
-		q := 0;
-		r := 1;
-		for i :=2 to n do
-		begin
-			p := q;
-			q := r;
-			r := p + q
-		end;
-		Fibbonacci := r
-	end;
+	quad := x * x;
+	cube := quad * x;
+	fourth := cube * x;
+	fifth := fourth * x
 end;
+
 var
-	n: integer;
+	p, q, r, t: real;
 begin
-	write('Enter number: ');
-	readln(n);
-	writeln(Fibbonacci(n))
+	Powers(17.5, p, q, r, t);
+	writeln('Квадрат числа:', p:8:2);     // второй аргумент :8:2 означает ширину поля и количество знаков после запятой
+    writeln('Куб числа:', q:8:2);
+    writeln('Четвертая степень:', r:8:2);
+    writeln('Пятая степень:', t:8:2);
 end.
